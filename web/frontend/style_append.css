@@ -1,0 +1,255 @@
+/* 번호판 UI 스타일 */
+.lotto-interface {
+    display: flex;
+    gap: 20px;
+    height: 600px;
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 사이드바 */
+.lotto-sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lotto-tab {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.lotto-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lotto-tab.active {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: var(--primary-color);
+}
+
+.lotto-tab.active .tab-title {
+    color: var(--primary-color);
+}
+
+.tab-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.tab-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* AI 탭 특수 효과 */
+.ai-tab {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.ai-tab.active {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+    border-color: #8b5cf6;
+}
+
+.ai-tab .tab-title {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 번호 선택판 (중앙) */
+.lotto-board-section {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-display {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.lotto-number-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.lotto-number-btn:hover {
+    border-color: var(--text-secondary);
+}
+
+.lotto-number-btn.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.board-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.board-actions button {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* 우측 카트 */
+.lotto-cart-section {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+    color: #333;
+    /* 카트는 흰 배경이라 검은 글씨 */
+}
+
+.cart-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cart-slots {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+.cart-slot {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.cart-slot.filled {
+    background: #fff;
+    border-color: #ddd;
+}
+
+.slot-label {
+    font-weight: 700;
+    width: 60px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.slot-numbers {
+    flex: 1;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.mini-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #eee;
+    color: #555;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.cart-slot.filled .mini-number {
+    background: var(--primary-color);
+    color: white;
+}
+
+.slot-actions {
+    width: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-footer {
+    padding: 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.gpt-generation-loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

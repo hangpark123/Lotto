@@ -1,0 +1,3 @@
+# AI dependencies
+huggingface_hub
+numpy

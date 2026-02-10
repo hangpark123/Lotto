@@ -1,0 +1,20 @@
+[MASTER]
+disable=
+  C0114, # no docstring
+  C0116, # no docstring
+  C0115, # no docstring
+  W0108, # Lambda may not be necessary
+  R1724, # no elif
+  W0511, # no TODO
+  R1705, # no else
+  R0903, # too few public methods
+  W0718, # broad exception caught
+  W0707, # raise-missing-from
+  C2401, # non-ascii-name
+
+
+[FORMAT]
+max-line-length=180
+good-names=i,j,k,f,e
+disable=logging-fstring-interpolation
+max-args=7

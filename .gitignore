@@ -1,0 +1,15 @@
+.venv/
+venv/
+web/backend/venv/
+.vscode/
+*.rest
+__pycache__/
+.DS_Store
+build/
+*.egg-info/
+dist/
+*.spec
+*~
+.idea/
+_scm_version.py
+src/dhapi/_version.py
